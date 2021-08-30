@@ -6,8 +6,7 @@ import { HttpClient } from "@angular/common/http"
 })
 export class IdadeService {
 
-  /* private readonly API = "https://arcane-forest-15844.herokuapp.com/idade" */
-  private readonly API = "rs"
+  private readonly API = "https://arcane-forest-15844.herokuapp.com/idade"
   constructor(private $http: HttpClient) { }
 
   buscarIdade() {
