@@ -1,0 +1,124 @@
+<div class="scale-in-center">
+
+    <!-- INICIO SOBRE MIM -->
+
+    <div class="card" style="display: flex;">
+
+        <div class="card-body">
+            <div class="row">
+                <h1 class="card-title">Sobre mim</h1>
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Nome: </strong>
+                    <span>João Marcelo de Jesus Macedo</span>
+                </div>
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Tempo de experiência: </strong>
+
+                    <div *ngIf="ano >= 1 && mes == 0 then anos"></div>
+
+                    <div *ngIf="ano == 0 && mes <= 1 then meses"></div>
+
+                    <div *ngIf="ano >= 1 && mes >= 1 then ambos"></div>
+
+                    <ng-template #anos>
+                        <span>{{ano}} {{textoExperienciaMes}}</span>
+                    </ng-template>
+
+                    <ng-template #meses>
+                        <span>{{mes}} {{textoExperienciaMes}}</span>
+                    </ng-template>
+
+                    <ng-template #ambos>
+                        <span>{{ano}} {{textoExperienciaAno}} e {{mes}} {{textoExperienciaMes}}</span>
+                    </ng-template>
+
+                </div>
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Idade: </strong>
+                    <span>{{idade}}</span>
+                </div>
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Número de telefone: </strong>
+                    <span>+55 61 99432-2941</span>
+                </div>
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Localidade: </strong>
+                    <span>Brasília, Brasil</span>
+                </div>
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Nível de carreira: </strong>
+                    <span>Junior</span>
+                </div>
+
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Email: </strong>
+                    <span>joaomarcelo588@gmail.com</span>
+                </div>
+
+
+                <div class="col-md-6 col-12 mb-2">
+                    <strong>Grau de ensino: </strong>
+                    <span> Ensino Superior</span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <h2 class="card-title">Um pouco mais sobre mim</h2>
+
+                    <p>Olá! Eu sou um Desenvolvedor FullStack Java e Angular 2+. Tenho conhecimentos em desenvolvimento
+                        de serviços webs junto com API Rest</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-12 d-flex justify-content-center flex-wrap">
+
+                        <span class="d-flex justify-content-center espacamentoLogos">
+                            <img src="../../assets/sobreMim/java.png" title="Java" alt="Java">
+                        </span>
+
+                        <span class="d-flex justify-content-center espacamentoLogos">
+                            <img src="../../assets/sobreMim/spring.png" alt="Spring Boot" title="Spring Boot">
+                        </span>
+
+                        <span class="d-flex justify-content-center espacamentoLogos">
+                            <img src="../../assets/sobreMim/angular.png" alt="Angular 2+" title="Angular 2+">
+                        </span>
+
+                        <span class="d-flex justify-content-center espacamentoLogos">
+                            <img src="../../assets/sobreMim/apirest.png" title="API Rest" alt="Api Rest">
+                        </span>
+
+                        <span class="d-flex justify-content-center espacamentoLogos">
+                            <img src="../../assets/sobreMim/bootstrap.png" title="Bootstrap" alt="Bootstrap">
+                        </span>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- FIM SOBRE MIM -->
+
+</div>

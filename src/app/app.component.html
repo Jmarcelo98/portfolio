@@ -1,0 +1,186 @@
+<!-- INICIO MENU NAV COM SOMBRA !-->
+<nav id="menuFixo" style="box-shadow: {{sombra}}">
+
+  <div class="container p-0">
+
+    <ul class="navBarResponsivo nav nav-pills nav-justified flex-nowrap no-wrap py-3" role="tablist"
+      style="background-color: rgb(73, 73, 75);">
+
+      <li class="nav-item ms-2" role="presentation">
+        <button class="nav-link active" type="button" role="tab" data-toggle="tab" aria-selected="true"
+          (click)="paginaRenderizar = 'sobreMim'">
+          Sobre
+        </button>
+      </li>
+
+      <li class="nav-item ms-1">
+        <button class="nav-link " type="button" data-toggle="tab" role="tab" aria-selected="false"
+          (click)="paginaRenderizar = 'experiencia'">
+          Experiência
+        </button>
+      </li>
+
+      <li class="nav-item ms-1">
+        <button class="nav-link" type="button" data-toggle="tab" role="tab" aria-selected="false"
+          (click)="paginaRenderizar = 'educacao'">Educação</button>
+      </li>
+
+      <li class="nav-item ms-1">
+        <button class="nav-link " type="button" data-toggle="tab" role="tab" aria-selected="false"
+          (click)="paginaRenderizar = 'certificacoesEConquistas'">Conquistas</button>
+      </li>
+
+      <li class="nav-item ms-1 me-2">
+        <button class="nav-link " type="button" data-toggle="tab" role="tab" aria-selected="false"
+          (click)="paginaRenderizar = 'contatos'">Contatos</button>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<!-- FIM MENU NAV COM SOMBRA !-->
+
+
+<!-- INICIOS DE ITENS A ESQUERDA !-->
+<div class="container pb-3 " id="preencherACorEntreNavEBody">
+
+  <div class="row">
+
+    <div class="col-md-8 col-12 mt-3 mt-md-0">
+
+      <div *ngIf="paginaRenderizar == 'sobreMim' then sobreMim"></div>
+
+      <div *ngIf="paginaRenderizar == 'experiencia' then experiencia"></div>
+
+      <div *ngIf="paginaRenderizar == 'educacao' then educacao"></div>
+
+      <div *ngIf="paginaRenderizar == 'certificacoesEConquistas' then certificacoesEConquistas"></div>
+
+      <div *ngIf="paginaRenderizar == 'contatos' then contatos"></div>
+
+    </div>
+    <!-- FIM DE ITENS A ESQUERDA !-->
+
+    <!-- INICIOS DE ITENS A DIREITA !-->
+    <div class="col-md-4 col-12 mt-3 mt-md-0">
+
+      <div class="card border-secondary">
+
+        <img class="card-img-top" src="../assets/euCru.jpeg">
+
+        <div class="card-body">
+          <h4 class="card-title">João Marcelo</h4>
+          <p class="card-text">Estudante de Sistemas de Informação. Apaixonado por programação, principalmente Java
+            para
+            Web e Angular 2+</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+
+          <li class="list-group-item">
+            <strong>Idade: </strong>
+            <span>{{idade}}</span>
+          </li>
+
+          <li class="list-group-item">
+            <strong>Experiência: </strong>
+
+            <div *ngIf="ano >= 1 && mes == 0 then anos"></div>
+
+            <div *ngIf="ano == 0 && mes <= 1 then meses"></div>
+
+            <div *ngIf="ano >= 1 && mes >= 1 then ambos"></div>
+
+            <ng-template #anos>
+              <span>{{ano}} {{textoExperienciaAno}}</span>
+            </ng-template>
+
+            <ng-template #meses>
+              <span>{{mes}} {{textoExperienciaMes}}</span>
+            </ng-template>
+
+            <ng-template #ambos>
+              <span>{{ano}} {{textoExperienciaAno}} e {{mes}} {{textoExperienciaMes}}</span>
+            </ng-template>
+
+
+
+          <li class="list-group-item">
+            <strong>Grau de ensino: </strong>
+            <span>Ensino Superior</span>
+          </li>
+
+        </ul>
+
+        <div class="card-body d-flex justify-content-center">
+          <a class="card-link" href="https://github.com/Jmarcelo98" target="_blank">
+            <img src="../assets/icones/github.png" alt="GitHub">
+          </a>
+
+          <a class="card-link" href="https://www.linkedin.com/in/jmarcelo98/" target="_blank">
+            <img src="../assets/icones/linkedin.png" alt="LinkedIn">
+          </a>
+
+          <a class="card-link" href="mailto:joaomarcelo588@gmail.com" target="_blank">
+            <img src="../assets/icones/gmail.png" alt="Email">
+          </a>
+
+        </div>
+      </div>
+    </div>
+    <!-- FIM DOS ITENS A DIREITA !-->
+
+  </div>
+
+</div>
+
+
+<!-- TEMPLATES PARA CARREGAR NA PAGINA !-->
+
+<ng-template #sobreMim>
+  <app-sobre-mim> </app-sobre-mim>
+</ng-template>
+
+<ng-template #experiencia>
+  <app-experiencia> </app-experiencia>
+</ng-template>
+
+<ng-template #educacao>
+  <app-educacao> </app-educacao>
+</ng-template>
+
+<ng-template #certificacoesEConquistas>
+  <app-certificacoes-econquistas></app-certificacoes-econquistas>
+</ng-template>
+
+<ng-template #contatos>
+  <app-contatos> </app-contatos>
+</ng-template>
+
+<!-- FIM DOS TEMPLATES PARA CARREGAR NA PAGINA !-->
+
+<!-- INICIO DO RODAPE -->
+<footer class="footer">
+
+  <div class="footer-copyright py-3">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-6" style="text-align: start;">
+          <span>2021 © João Marcelo. Todos os direitos reservados.</span>
+        </div>
+
+        <div class="col-6" style="text-align: end;">
+          <span>joaomarcelo588@gmail.com <strong>/</strong> (61) 99432-2941</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+<!-- FIM DO RODAPE -->

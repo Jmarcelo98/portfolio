@@ -1,0 +1,57 @@
+
+
+button {
+    color: rgb(246, 244, 244);
+}
+
+footer {
+    background-color: rgb(73, 73, 75);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        position: inherit;
+    }
+  }
+
+#menuFixo {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: rgb(73, 73, 75);
+}
+
+
+#preencherACorEntreNavEBody {
+    padding: 1em;
+}
+
+
+.centralizar {
+    text-align: center;
+}
+
+/* .espacamentoNav {
+    margin-top: 0.8em;
+}
+ */
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.navBarResponsivo{/* white-space:nowrap; */
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    background-image:-webkit-gradient(linear,left top,right top,from(#fff),to(#fff)),-webkit-gradient(linear,left top,right top,from(#fff),to(#fff)),-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.3)),to(hsla(0,0%,100%,0))),-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.3)),to(hsla(0,0%,100%,0)));
+    background-image:-webkit-linear-gradient(left,#fff,#fff),-webkit-linear-gradient(left,#fff,#fff),-webkit-linear-gradient(left,rgba(0,0,0,.3),hsla(0,0%,100%,0)),-webkit-linear-gradient(right,rgba(0,0,0,.3),hsla(0,0%,100%,0));
+    background-image:linear-gradient(90deg,rgb(73, 73, 75),rgb(73, 73, 75)),linear-gradient(90deg,rgb(73, 73, 75),rgb(73, 73, 75)),linear-gradient(90deg,rgba(0,0,0,.3),hsla(0,0%,100%,0)),linear-gradient(270deg,rgba(0,0,0,.3),hsla(0,0%,100%,0));
+    background-position:0,100%,0,100%;
+    background-repeat:no-repeat;
+    background-color:#fff;
+    background-size:20px 100%,20px 100%,10px 100%,10px 100%;
+    background-attachment:local,local,scroll,scroll;}
