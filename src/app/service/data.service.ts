@@ -7,7 +7,7 @@ import { DataExperiencia } from '../models/data';
 })
 export class DataService {
 
-  private readonly API = "http://localhost:8080/data"
+  private readonly API = "https://arcane-forest-15844.herokuapp.com/data"
   constructor(private $http: HttpClient) { }
 
   buscarData(){
