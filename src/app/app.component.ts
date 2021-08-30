@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.idadeService.buscarIdade().subscribe(prods => {
+     this.idadeService.buscarIdade().subscribe(prods => {
       this.idade = prods;
     }, error => {
       console.log(error);
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
     }, error => {
       console.log(error);
 
-    })
+    }) 
   }
 
   @HostListener("window:scroll", [])

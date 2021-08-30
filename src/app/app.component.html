@@ -1,3 +1,9 @@
+<div *ngIf="idade > 0; then carregou else naoCarregou"></div>
+
+
+<ng-template #carregou>
+
+  
 <!-- INICIO MENU NAV COM SOMBRA !-->
 <nav id="menuFixo" style="box-shadow: {{sombra}}">
 
@@ -38,7 +44,6 @@
     </ul>
   </div>
 </nav>
-<!-- FIM MENU NAV COM SOMBRA !-->
 
 
 <!-- INICIOS DE ITENS A ESQUERDA !-->
@@ -135,6 +140,21 @@
   </div>
 
 </div>
+
+
+<!-- FIM MENU NAV COM SOMBRA !-->
+
+</ng-template>
+
+<ng-template #naoCarregou >
+  <div style="text-align: center; margin-top: 25%;" >
+  <img src="assets/gifs/carregando.gif" width="60em">
+  <div style="margin-top: 1em;">
+    <strong>AGUARDE UM MOMENTO...</strong>
+  </div>
+</div>
+</ng-template>
+
 
 
 <!-- TEMPLATES PARA CARREGAR NA PAGINA !-->
