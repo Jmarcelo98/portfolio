@@ -29,7 +29,7 @@ export class SobreMimComponent implements OnInit {
 
     this.dataService.buscarData().subscribe(prods => {
       this.ano = prods.ano
-      this.mes = prods.mes
+      this.mes = prods.mes      
 
       if (this.ano > 1) {
         this.textoExperienciaAno = "anos"

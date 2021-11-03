@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http"
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { HttpClient } from "@angular/common/http"
 export class IdadeService {
 
   private readonly API = "https://arcane-forest-15844.herokuapp.com/idade"
+  private readonly API_LOCAL = `${environment.API_LOCAL}/idade`
   constructor(private $http: HttpClient) { }
 
   buscarIdade() {
